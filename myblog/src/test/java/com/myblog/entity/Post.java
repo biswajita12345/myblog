@@ -5,19 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="Posts")
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-
 @Data
 
-
-public class post {
+public class Post {
     @Id
-    @GeneratedValue(strategy = GeneratedValue(strategy=GenerationType.IDENTITY)
-    private long id ;
-    private  String title;
+    @GeneratedValue(Strategy = GenerationType.IDENTITY)
+    private long id;
+    private String title;
     private String description;
-    private String Content
+    private String content;
 }
